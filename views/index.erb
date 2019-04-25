@@ -23,11 +23,11 @@
     <% @contents.each do |content|  %>
     <article>
       <figure>
-       <div class="edit">
-       <form action="/edit/<%= content.id %>" method="post"><input type="submit" value="編集"></form>
-      <form action="/delete/<%= content.id %>" method="post"><input type="submit" value="削除"></form>
-      </div>
-      <% unless content.img.empty? %><img src="<%= content.img %>" alt=""><% end %>
+        <div class="edit">
+          <form action="/edit/<%= content.id %>" method="post"><input type="submit" value="編集"></form>
+          <form action="/delete/<%= content.id %>" method="post"><input type="submit" value="削除"></form>
+        </div>
+        <% unless content.img.empty? %><img src="<%= content.img %>" alt=""><% end %>
       </figure>
       <section>
         <h3><%= content.name %></h3>
@@ -36,6 +36,6 @@
     </article>
 
     <% end %>
-  </main>
+</main>
 </body>
 </html>
