@@ -39,7 +39,7 @@ end
 post '/renew/:id' do
   content = Contribution.find(params[:id])
   content.update({
-    name: params[:user_name],
+    title: params[:title],
     body: params[:body]
   })
   redirect '/'
