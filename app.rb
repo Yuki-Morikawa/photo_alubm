@@ -15,7 +15,8 @@ post '/new' do
   Contribution.create({
     title: params[:title],
     body: params[:body],
-    url: params[:url]
+    url: params[:url],
+    img: ""
   })
 
   if params[:file]
